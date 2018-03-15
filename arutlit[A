@@ -1,0 +1,47 @@
+[33mcommit c02a0b917779f1942367b87e3b5ac6ba3a814ec1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Daniel Poliak <daniel.poliak94@gmail.com>
+Date:   Thu Mar 15 18:25:49 2018 +0100
+
+    users page working without photos
+
+[33mcommit 52878edce505dc2ac66955ff1adbc5846825eebe[m
+Author: Daniel Poliak <daniel.poliak94@gmail.com>
+Date:   Wed Mar 14 20:59:08 2018 +0100
+
+    created errors in form
+
+[33mcommit 69e44a603ed4706d2bc01941f00c3e54d962fff9[m
+Author: Daniel Poliak <daniel.poliak94@gmail.com>
+Date:   Wed Mar 14 17:12:40 2018 +0100
+
+    added select options for role and status
+
+[33mcommit 4cb2ec511f9a7beb61a5e9a393fc2fef07fbe7c4[m
+Author: Daniel Poliak <daniel.poliak94@gmail.com>
+Date:   Mon Mar 12 20:09:09 2018 +0100
+
+    making create users page
+
+[33mcommit f01c53fd07086ab059e8c404a4cd3b9760e3f8bb[m
+Author: Daniel Poliak <daniel.poliak94@gmail.com>
+Date:   Mon Mar 12 17:22:35 2018 +0100
+
+    some things
+
+[33mcommit 9bae4289f0e8fc32600f594a013417342a1541d5[m
+Author: Daniel Poliak <daniel.poliak94@gmail.com>
+Date:   Sun Mar 11 17:57:11 2018 +0100
+
+    added assets
+
+[33mcommit 2578d047ad0ae2a62a7bee6de15cd9ec5c565511[m
+Author: danielpoliak <daniel.poliak94@gmail.com>
+Date:   Thu Mar 8 02:55:05 2018 +0100
+
+    my second commit
+
+[33mcommit 94d0128b2b6595f91af8038db938584675ffb828[m
+Author: Daniel Poliak <daniel.poliak94@gmail.com>
+Date:   Wed Mar 7 17:49:19 2018 +0100
+
+    my first commit
