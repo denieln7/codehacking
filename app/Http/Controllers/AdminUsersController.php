@@ -47,7 +47,14 @@ class AdminUsersController extends Controller
         // User::create($request->all());
         //
         // return redirect('admin/users');
-        $input = $request->all();
+
+        if(trim($request->password) == '') {
+            $input = $request->except('password');
+        } else {
+            $input = $request->all();
+            $input['password'] = bcrypt($request->password);
+        }
+
         if ($file = $request->file('photo_id')) {
 
           $name = time() . $file->getClientOriginalName();
@@ -59,7 +66,7 @@ class AdminUsersController extends Controller
           $input['photo_id'] = $photo->id;
         }
 
-        $input['password'] = bcrypt($request->password);
+
 
         User::create($input);
 
@@ -102,6 +109,13 @@ class AdminUsersController extends Controller
     public function update(UsersEditRequest $request, $id)
     {
         $user = User::findOrFail($id);
+
+        if(trim($request->password) == '') {
+            $input = $request->except('password');
+        } else {
+            $input = $request->all();
+            $input['password'] = bcrypt($request->password);
+        }
 
         $input = $request->all();
 
