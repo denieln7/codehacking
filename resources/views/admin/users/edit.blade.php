@@ -12,7 +12,7 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-9">
+  <div class="col-sm-8">
     {!! Form::model($user,['method'=>'PATCH', 'action'=>['AdminUsersController@update', $user->id], 'files' => true]) !!}
 
       <div class="form-group">
@@ -46,10 +46,22 @@
       </div>
 
       <div class="form-group">
-        {!! Form::submit('Create Post', ['class'=>'btn btn-primary']) !!}
+        {!! Form::submit('Create Post', ['class'=>'btn btn-primary col-sm-5']) !!}
       </div>
 
       {!! Form::close() !!}
+
+
+
+      {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
+
+        <div class="form-group">
+          {!! Form::submit('Delete user', ['class'=>'btn btn-danger col-sm-2']) !!}
+        </div>
+
+        {!! Form::close() !!}
+
+
   </div>
 </div>
 

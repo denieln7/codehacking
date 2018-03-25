@@ -78,7 +78,7 @@
 
 
 
-        {{--<ul class="nav navbar-nav navbar-right">--}}
+        {{-- <ul class="nav navbar-nav navbar-right">--}}
         {{--@if(auth()->guest())--}}
         {{--@if(!Request::is('auth/login'))--}}
         {{--<li><a href="{{ url('/auth/login') }}">Login</a></li>--}}
@@ -96,7 +96,7 @@
         {{--</ul>--}}
         {{--</li>--}}
         {{--@endif--}}
-        {{--</ul>--}}
+        {{--</ul> --}}
 
 
 
