@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    //
-    public static function lists($string, $string1)
-    {
-    }
+    protected $fillable = [
+      'name'
+    ];
 }
