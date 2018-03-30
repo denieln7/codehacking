@@ -24,7 +24,7 @@
                   <td>{{$post->id}}</td>
                   <td><img height="50" src="{{$post->photo!=null ? $post->photo->file : 'https://media.giphy.com/media/20k1punZ5bpmM/giphy.gif'}}" alt=""></td>
                   <td>{{$post->user->name}}</td>
-                  <td>{{$post->category_id}}</td>
+                  <td>{{$post->category ? $post->category->name : "Uncategorized"}}</td>
                   <td><a href="{{route('posts.edit', $post->id)}}">{{$post->title}}</a></td>
                   <td>{{$post->body}}</td>
                   <td>{{$post->created_at->diffForHumans()}}</td>
