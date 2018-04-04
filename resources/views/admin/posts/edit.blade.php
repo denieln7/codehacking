@@ -33,10 +33,18 @@
   </div>
 
   <div class="form-group">
-    {!! Form::submit('Update Post', ['class'=>'btn btn-primary']) !!}
+    {!! Form::submit('Update Post', ['class'=>'btn btn-primary col-sm-5']) !!}
   </div>
 
   {!! Form::close() !!}
+
+  {!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]]) !!}
+
+    <div class="form-group">
+      {!! Form::submit('Delete post', ['class'=>'btn btn-danger col-sm-2']) !!}
+    </div>
+
+    {!! Form::close() !!}
 
   @include('includes.form-errors')
 

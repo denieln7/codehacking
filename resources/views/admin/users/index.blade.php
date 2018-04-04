@@ -33,7 +33,7 @@
                       <td><img height="50px" src="{{$user->photo ? $user->photo->file : 'https://media.giphy.com/media/20k1punZ5bpmM/giphy.gif'}}" alt=""></td>
                       <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
                       <td>{{$user->email}}</td>
-                      <td>{{$user->role->name}}</td>
+                      <td>{{$user->role ? $user->role->name : 'No role'}}</td>
                       <td>{{$user->is_active ? 'Active' : 'None'}}</td>
                       <td>{{$user->created_at->diffForHumans()}}</td>
                       <td>{{$user->updated_at->diffForHumans()}}</td>
