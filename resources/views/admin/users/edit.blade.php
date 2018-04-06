@@ -5,13 +5,14 @@
 
 <h1>Edit User</h1>
 
-<div class="col-sm-3">
-
-  <img src="{{$user->photo ? $user->photo->file : 'https://media.giphy.com/media/20k1punZ5bpmM/giphy.gif'}}" alt="" class="img-responsive img-rounded">
-
-</div>
-
 <div class="row">
+
+  <div class="col-sm-3">
+
+    <img src="{{$user->photo ? $user->photo->file : 'https://media.giphy.com/media/20k1punZ5bpmM/giphy.gif'}}" alt="" class="img-responsive img-rounded">
+
+  </div>
+
   <div class="col-sm-8">
     {!! Form::model($user,['method'=>'PATCH', 'action'=>['AdminUsersController@update', $user->id], 'files' => true]) !!}
 
@@ -51,8 +52,6 @@
 
       {!! Form::close() !!}
 
-
-
       {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
 
         <div class="form-group">
@@ -63,6 +62,7 @@
 
 
   </div>
+
 </div>
 
 
