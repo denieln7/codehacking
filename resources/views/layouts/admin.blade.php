@@ -15,6 +15,7 @@
     {{--<link href="{{asset('css/app.css')}}" rel="stylesheet">--}}
 
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
+    @yield('styles')
 
 
 
@@ -171,11 +172,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Media<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/media">All Media</a>
+                                <a href="{{route('media.index')}}">All Media</a>
                             </li>
 
                             <li>
-                                <a href="">Upload Media</a>
+                                <a href="{{route('media.create')}}">Upload Media</a>
                             </li>
 
                         </ul>
@@ -351,7 +352,7 @@
 <script src="{{asset('js/libs.js')}}"></script>
 
 
-@yield('footer')
+@yield('scripts')
 
 
 
