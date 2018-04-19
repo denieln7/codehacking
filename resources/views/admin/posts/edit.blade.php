@@ -7,7 +7,7 @@
 <div class="row">
 
   <div class="col-sm-3">
-    <img src="{{$post->photo->file}}" alt="" class="img-responsive">
+    <img src="{{$post->photo!=null ? $post->photo->file : 'https://media.giphy.com/media/20k1punZ5bpmM/giphy.gif'}}" alt="" class="img-responsive">
   </div>
 
   <div class="col-sm-9">

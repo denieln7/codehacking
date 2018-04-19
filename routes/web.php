@@ -18,21 +18,20 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/admin', function() {
-  return view('admin.index');
-});
+Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostsController@post']);
 
 Route::group(['middleware'=>'admin'], function() {
-
-    Route::resource('admin/users', 'AdminUsersController');
-    Route::resource('admin/posts', 'AdminPostsController');
-    Route::resource('admin/categories', 'AdminCategoriesController');
-    Route::resource('admin/media', 'AdminMediaController');
-    
-    // Route::get('admin/media/upload', ['as' => 'admin.media.upload', 'uses' => 'AdminMediaController@store']);
-
-
+  Route::get('/admin', function() {
+    return view('admin.index');
+  });
+  Route::resource('admin/users', 'AdminUsersController');
+  Route::resource('admin/posts', 'AdminPostsController');
+  Route::resource('admin/categories', 'AdminCategoriesController');
+  Route::resource('admin/media', 'AdminMediaController');
+  Route::resource('admin/comments', 'PostCommentsController');
+  Route::resource('admin/comments/replies', 'CommentRepliesController');
 });
+
+
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
