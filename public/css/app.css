@@ -53,7 +53,7 @@ html {
 }
 
 @-ms-viewport {
-  max-width: device-width;
+  width: device-width;
 }
 
 article,
@@ -10002,5 +10002,9 @@ a.text-dark:focus {
 
 #admin-page {
   padding-top: 0px;
+}
+
+.nested-comment {
+  margin-top: 60px;
 }
 

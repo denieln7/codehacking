@@ -32,6 +32,9 @@ Route::group(['middleware'=>'admin'], function() {
   Route::resource('admin/comments/replies', 'CommentRepliesController');
 });
 
+Route::group(['middleware'=>'auth'], function() {
+  Route::post('comments/reply', 'CommentRepliesController@createReply');
+});
 
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
