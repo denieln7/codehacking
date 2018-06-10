@@ -47,6 +47,7 @@ class AdminPostsController extends Controller
     public function store(PostsCreateRequest $request)
     {
         $input = $request->all();
+
         $user = Auth::user();
 
         if($file = $request->file('photo_id')) {
@@ -138,9 +139,9 @@ class AdminPostsController extends Controller
       return redirect('admin/posts');
     }
 
-    public function post($id) {
+    public function post($slug) {
 
-      $post = Post::findOrFail($id);
+      $post = Post::findBySlugOrFail($slug);
 
       $comments = $post->comments()->whereIsActive(1)->get();
 

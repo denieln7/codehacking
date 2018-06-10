@@ -3,15 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-// use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Post extends Model
 {
-    // use Sluggable;
-
-    // protected $sluggable = [
-    //   'onUpdate' => true,
-    // ]
+    use Sluggable;
+    use SluggableScopeHelpers;
 
     protected $fillable = [
       'user_id',
@@ -20,6 +18,15 @@ class Post extends Model
       'title',
       'body'
     ];
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 
     public function user() {
       return $this->belongsTo('App\User');

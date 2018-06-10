@@ -51,4 +51,9 @@ class User extends Authenticatable
     public function posts() {
       return $this->hasMany('App\Post');
     }
+
+    public function getGravatarAttribute() {
+      $hash = md5(strtolower(trim($this->attributes['email']))). "?d=mm";; //ak nie je dostupná gravatar tak zobrazí default user photo bez tváre
+      return "https://sk.gravatar.com/avatar/$hash";
+    }
 }
