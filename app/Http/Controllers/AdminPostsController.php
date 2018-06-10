@@ -21,7 +21,7 @@ class AdminPostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(4); //maximálne 4 posty na jednej stránke
 
         return view('admin.posts.index', compact('posts'));
     }

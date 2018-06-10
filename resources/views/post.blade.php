@@ -80,8 +80,7 @@
 
             @if (count($comment->replies) > 0)
               @foreach ($comment->replies as $reply)
-
-
+                @if ($reply->is_active == 1)
 
                   <!-- Nested Comment -->
                   <div class="media">
@@ -98,7 +97,7 @@
                       <div class="comment-reply-container">
 
                         <button class="toggle-reply btn btn-primary pull-right">Reply</button>
-                        <div class="comment-reply">
+                        <div class="comment-reply col-sm-6">
 
                           {!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply']) !!}
                             <div class="form-group">
@@ -111,12 +110,12 @@
                               {!! Form::submit('Submit comment', ['class'=>'btn btn-primary']) !!}
                             </div>
                           {!! Form::close() !!}
-
                         </div>
-
                       </div>
-
                 </div>
+                @else
+                <h1 class="text-center">No Replies</h1>
+                @endif
 
               @endforeach
             @endif
